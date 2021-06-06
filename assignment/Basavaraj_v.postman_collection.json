@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "8d84ff83-8785-4be4-869a-f9a5fb00f369",
+		"name": "Basavaraj_v",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/api1/v2/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"invalid_trigger\": \"invalid_ids_stated\",\r\n            \"key\": \"ids_stated\",\r\n            \"name\": \"govt_id\",\r\n            \"reuse\": true,\r\n            \"support_multiple\": true,\r\n            \"pick_first\": false,\r\n            \"supported_values\": [\r\n                \"pan\",\r\n                \"aadhaar\",\r\n                \"college\",\r\n                \"corporate\",\r\n                \"dl\",\r\n                \"voter\",\r\n                \"passport\",\r\n                \"local\"\r\n            ],\r\n            \"type\": [\r\n                \"id\"\r\n            ],\r\n            \"validation_parser\": \"finite_values_entity\",\r\n            \"values\": [\r\n                {\r\n                \"entity_type\": \"id\",\r\n                \"value\": \"college\"\r\n                }\r\n            ]\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api1/v2/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api1",
+						"v2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api1/v1/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"invalid_trigger\": \"invalid_age\",\r\n  \"key\": \"age_stated\",\r\n  \"name\": \"age\",\r\n  \"reuse\": true,\r\n  \"pick_first\": false,\r\n  \"type\": [\r\n    \"number\"\r\n  ],\r\n  \"validation_parser\": \"numeric_values_entity\",\r\n  \"constraint\": \"x>=18 and x<=30\",\r\n  \"var_name\": \"x\",\r\n  \"values\": [\r\n    {\r\n      \"entity_type\": \"number\",\r\n      \"value\": 23\r\n    },\r\n    {\r\n      \"entity_type\": \"number\",\r\n      \"value\": 23\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api1/v1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api1",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
